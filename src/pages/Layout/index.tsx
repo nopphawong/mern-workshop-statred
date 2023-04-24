@@ -10,8 +10,13 @@ const drawerWidth: number = 240
 const Layout = () => {
   const isNonMobile = useMediaQuery('(min-width: 600px')
   const [open, setOpen] = useState(isNonMobile ? true : false)
+
   const toggleDrawer = () => {
     setOpen(!open)
+  }
+
+  const SignOut = () => {
+    console.log('Sign Out')
   }
 
   return (
@@ -25,6 +30,7 @@ const Layout = () => {
         drawerWidth={drawerWidth}
         open={open}
         toggleDrawer={toggleDrawer}
+        SignOut={SignOut}
       />
       <div className='flex flex-col'>
         <Box
