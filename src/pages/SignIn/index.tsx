@@ -1,10 +1,14 @@
 import * as React from 'react'
-import Avatar from '@mui/material/Avatar'
-import Button from '@mui/material/Button'
-import TextField from '@mui/material/TextField'
-import Box from '@mui/material/Box'
+import {
+  Avatar,
+  Button,
+  TextField,
+  Box,
+  Typography,
+  Grid,
+  Link,
+} from '@mui/material'
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
-import Typography from '@mui/material/Typography'
 
 const SignIn = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -17,13 +21,7 @@ const SignIn = () => {
   }
 
   return (
-    <Box
-      sx={{
-        marginTop: 8,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center'
-      }}
+    <Box className='mt-8 mx-8 flex flex-col items-center'
     >
       <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
         <LockOutlinedIcon />
@@ -61,6 +59,13 @@ const SignIn = () => {
         >
           Sign In
         </Button>
+        <Grid container justifyContent='flex-end'>
+          <Grid item>
+            <Link href='/signup' variant='body2'>
+                {"Don't have an account? Sign Up"}
+            </Link>
+          </Grid>
+        </Grid>
       </Box>
     </Box>
   )
