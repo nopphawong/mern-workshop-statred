@@ -1,7 +1,7 @@
 import { Container, Grid, Paper } from '@mui/material'
 import Chart from '@/components/Charts'
 import Deposits from '@/components/Deposits'
-import Orders from '@/components/Orders'
+import Orders from '@/components/RecoentOrders'
 
 const Dashboard = () => {
   return (
